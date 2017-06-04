@@ -15,7 +15,7 @@ let play = false;
 botaoPlay.addEventListener("click", function() {
     if (play) {
         play = false;
-        timer.parar(curso);
+        timer.parar(curso.textContent);
     }
     else {
         play = true;
