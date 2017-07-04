@@ -27,15 +27,15 @@ botaoPlay.addEventListener("click", function() {
     if (play) {
         play = false;
         timer.parar(curso.textContent);
-        new Notification("Alura Timer", 
-            { body: `O curso ${curso.textContent} foi parado.`, icon: "img/stop-button.png" }
+        new Notification("Timesheet", 
+            { body: `A tarefa ${curso.textContent} foi parada.`, icon: "img/stop-button.png" }
         );
     }
     else {
         play = true;
         timer.iniciar(tempo);
-        new Notification("Alura Timer", 
-            { body: `O curso ${curso.textContent} foi iniciado`, icon: "img/play-button.png" }
+        new Notification("Timesheet", 
+            { body: `A tarefa ${curso.textContent} foi iniciada`, icon: "img/play-button.png" }
         );
     }
 
@@ -46,7 +46,7 @@ botaoPlay.addEventListener("click", function() {
 botaoAdicionar.addEventListener("click", function() {
 
     if (campoAdicionar.value == "") {
-        console.log("Nome do curso obrigatório");
+        console.log("Nome da tarefa obrigatório");
         return;
     }
     let novoCurso = campoAdicionar.value;
@@ -64,7 +64,7 @@ ipcRenderer.on("curso-trocado", (event, nomeCurso) => {
     .then((dados) => {
         tempo.textContent = dados.tempo;
     }).catch((err) => {
-        console.log("O curso não possui um JSON");
+        console.log("A tarefa não possui um JSON");
         tempo.textContent = "00:00:00";
     });
 
