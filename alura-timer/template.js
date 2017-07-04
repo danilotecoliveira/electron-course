@@ -71,19 +71,19 @@ module.exports = {
                         role: "close" 
                     }
                 ]
-            },
-            { 
-                label: "Sobre",
-                submenu: [ 
-                    { 
-                        label: "Sobre o Alura Timer",
-                        accelerator: "CmdOrCtrl+I",
-                        click: () => {
-                            ipcMain.emit("abrir-janela-sobre");
-                        }
-                    } 
-                ]
-            }
+            }//,
+            // { 
+            //     label: "Sobre",
+            //     submenu: [ 
+            //         { 
+            //             label: "Sobre o Alura Timer",
+            //             accelerator: "CmdOrCtrl+I",
+            //             click: () => {
+            //                 ipcMain.emit("abrir-janela-sobre");
+            //             }
+            //         } 
+            //     ]
+            // }
         ];
 
         if (process.platform == "darwin") {

@@ -1,12 +1,13 @@
 {
-  "name": "alura-timer",
+  "name": "timesheet",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-    "electron:build": "electron-packager ./ alura-timer --overwrite --platform=all --arch=all --icon=./icons/icon"
+    "electron:win": "electron-packager ./ Timesheet --overwrite --platform=win32 --arch=ia32 --prune=true --out=release-builds --icon=./icons/icon",
+    "electron:mac": "electron-packager ./ Timesheet --overwrite --platform=darwin --arch=x64 --prune=true --out=release-builds --icon=./icons/icon"
   },
   "author": "",
   "license": "ISC",
